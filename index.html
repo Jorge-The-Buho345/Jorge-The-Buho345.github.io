@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title>El deber de la tortuga</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="Juego didactico para el aprendizaje de la terminal Linux">
+	<meta name="author" content="Jorge ivan">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="main.css">
+	<link rel="icon" href="resources/assets/favicon.ico">
+	<script defer type="module" src="game.js"></script>
+
+</head>
+<body class="frame">
+	<section class="scene menu">
+		<div class="menu__container">
+			<h1 class="menu-ctn__title">El deber de la tortuga</h1>
+			<button class="menu-ctn__button" id="game">Jugar</button>
+			<button class="menu-ctn__button" id="credits">Creditos</button>
+		</div>
+		<footer class="menu__footer">
+			<span class="menu-ft__version">Beta v0.1 por Jorge Ivan Spalax developer</span>
+		</footer>
+	</section>
+	<section class="scene intro hidden">
+		<!-- <div id="slideshow"> -->
+		<!--     <img src="imagen1.jpg" alt="slide 1"> -->
+		<!--     <img src="imagen2.jpg" alt="slide 2"> -->
+		<!--     <img src="imagen3.jpg" alt="slide 3"> -->
+		<!-- </div>	 -->
+	</section>
+	<section class="scene game hidden">
+		<div class="game__terminal">
+			<div class="game-tmn__output"></div>
+			<input class="game-tmn__input" type="text">
+		</div>
+		<div class="game__phone">
+			<div class="game-pn__screen"></div>
+		</div>
+		<div class="game__camera">
+			<div class="game-cmr__screen"></div>
+		</div>
+	</section>
+	<section class="scene credits hidden">
+		<p class="credicts__text">
+			El presente juego fue desarrollado por jorge Iván como proyecto final para la asignatura de introducción a la ingenieria y computacion. 
+			Todas las herramientas utilizadas para la realización de este juego son de libre uso. 
+			Las imagenes utilizadas son de creacion propia.
+			Los audios fueron utilizados de esta fuente
+			las fuentes tipograficas de esta fuente
+		</p>
+	</section>
+	<div class="alert hidden">
+		<p class="alert__text">La pantalla debe ir horizontal</p>
+	</div>
+	<section class="filter"></section>
+	<button class="audio"><i class="icon-volume-up"></i></button>
+
+
+<!-- <audio id="myAudio" src="ruta/al/archivo-de-audio.mp3" autoplay loop></audio> -->
+<!-- <button id="playButton">Reproducir</button> -->
+</body>
+</html>

@@ -1,0 +1,184 @@
+/* Estilos del juego */
+
+
+/* Configuracion de fuentes y simbolos */
+@font-face {
+  font-family: "Glitch Goblin";
+  src: url("resources/fonts/GlitchGoblin-2O87v.ttf");
+}
+
+@font-face {
+  font-family: Ignotum;
+  src: url("resources/fonts/Ignotum-7BMMw.ttf");
+}
+
+@font-face {
+  font-family: fontello;
+  src: url("resources/fonts/fontello.ttf");
+  }
+
+.icon-volume-up::before {
+    transition: font-size .15s;
+    font-family: fontello, sans-serif;
+    content: '\e800';
+}
+
+.icon-volume-off::before {
+    font-family: fontello, sans-serif;
+    content: '\e801';
+}
+
+.icon-pause::before {
+    font-family: fontello, sans-serif;
+    content: '\e802';
+}
+
+.icon-play::before {
+    font-family: fontello, sans-serif;
+    content: '\e803';
+}
+
+
+/* Configuracion inicial */
+* {
+    user-select:none;
+    padding: 0;
+    margin: 0;
+    border: none;
+    box-sizing: border-box;
+    font-size: 16px sans-serif; 
+    outline: none;
+    overflow: hidden;
+    background: none;
+
+/* Variables */
+    --fn-tt: 400 3rem "Glitch Goblin";
+    --fn-st: 400 1.5rem "Ignotum";
+    --fn-nm: 400 1rem "Ignotum";
+    --cl-a: #3D3D3Fff;
+    --cl-b: #748D78ff;
+    --cl-c: #FD6651ff;
+    --cl-d: #376BBFff;
+    --cl-e: #66B36Bff;
+    --cl-a1: #262626ff;
+    --cl-a2: #363638ff;
+    --cl-b1: #5D7160ff;
+    --cl-b2: #49514Bff;
+
+/* fuente estandar */
+    font-family: var(--fn-nm);
+    color: var(--cl-b);
+}
+
+.frame {
+    background: black;
+    padding: 1rem;
+    height: 100vh;
+    z-index: -3
+}
+
+.filter {
+    background-image: url('resources/assets/filter.png');
+    width:100%;
+    height:100%;
+    position:absolute;
+    inset: 1rem;
+    bottom: 1rem;
+}
+
+.scene {
+    border-radius: 1rem;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font: var(--fn-nm);
+}
+
+button, input {
+    position: relative;
+    z-index: 2;
+    cursor:pointer;
+}
+
+/* Estilos del menu principal */
+.menu {
+    background: var(--cl-a);
+    padding: 1rem;
+}
+
+.menu__container {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    gap:1rem;
+    border: 6px double var(--cl-b);
+    box-shadow:
+}
+
+.menu-ctn__title {
+    font:var(--fn-tt);
+    color: var(--cl-c);
+}
+
+.menu-ctn__button {
+    transition: color .15s;
+    transition: transform .15s;
+    font:var(--fn-st);
+    width:100px;
+}
+
+.menu-ctn__button:hover {
+    transition: color .3s;
+    transition: transform .3s;
+    color: var(--cl-e);
+    transform: scale(1.1); 
+}
+
+.menu__footer {
+    position: fixed;
+    bottom: 2rem;
+    font: 
+}
+
+
+
+
+
+
+/* utilidades */
+.audio {
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    font-size:2rem;
+    width: 3rem;
+}
+
+.audio:hover > .icon-volume-up::before{
+    transition: font-size .3s;
+    color: var(--cl-e);
+    font-size: 2.3rem;
+}
+
+.alert {
+    transition: opacity .3s;
+    width:100vw;
+    height:100vh;
+    position: absolute;
+    inset:0;
+    z-index: 5;
+    background: var(--cl-a);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hidden {
+    transition: opacity .1s;
+    opacity: 0;
+    z-index: -2;
+}
