@@ -54,7 +54,7 @@
 /* Variables */
     --fn-tt: 400 3rem "Glitch Goblin";
     --fn-st: 400 1.5rem "Ignotum";
-    --fn-nm: 400 1rem "Ignotum";
+    --fn-nm: 400 1.2rem "Ignotum";
     --cl-a: #3D3D3Fff;
     --cl-b: #748D78ff;
     --cl-c: #FD6651ff;
@@ -71,7 +71,7 @@
 }
 
 .frame {
-    background: black;
+    background: #000;
     padding: 1rem;
     height: 100vh;
     z-index: -3
@@ -87,9 +87,11 @@
 }
 
 .scene {
+    background: var(--cl-a);
     border-radius: 1rem;
-    width: 100%;
-    height: 100%;
+    width: calc(100% - 2rem);
+    height: calc(100% - 2rem);
+    position: absolute;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -105,7 +107,6 @@ button, input {
 
 /* Estilos del menu principal */
 .menu {
-    background: var(--cl-a);
     padding: 1rem;
 }
 
@@ -145,20 +146,101 @@ button, input {
 }
 
 
+/* Estilo para el juego en general */
+.game { 
+    color: var(--cl-e);
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 2rem;
+}
+
+.game__terminal {
+    background: var(--cl-a1);
+    color: var(--cl-c);
+    height: 90%;
+    width: 60%;
+    border-top: 1rem solid var(--cl-b2);
+    padding: .5rem;
+}
+
+.game-tmn__output {
+    width: 100%;
+    height: calc(100% - 2rem);
+    padding: 1rem;
+    font-size: 1rem;
+}
+
+.game-tmn-otp__text {
+    margin-bottom: .5rem;
+    letter-spacing: 2px; 
+}
+
+.game-tmn__input {  
+    width: 100%;
+    height: 2rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+.input {
+   width: calc(100% - 3rem);
+    letter-spacing: 2px; 
+   height: 100%;
+   padding: 0rem 1rem;
+   font: var(--fn-nm)
+}
+
+.prompt {
+    width: 3rem;
+    padding: 4.8px;
+    /* height: auto; */
+    color: var(--cl-a);
+    background: var(--cl-e);
+    text-align: center;
+}
 
 
+
+.game__utils {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    height: 90%;
+    width: 35%;
+}
+
+.game-ut__camera {
+    background: var(--cl-d);
+    height: 70%;
+    width: 100%;
+    border-top: 1rem solid var(--cl-b2);
+}
+
+.game-ut__clock {
+    background: var(--cl-c);
+    height: 30%;
+    width: 100%;
+    border-top: 1rem solid var(--cl-b2);
+    font: var(--fn-st);
+    color: var(--cl-a);
+    text-align: center;
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 
 /* utilidades */
 .audio {
     position: fixed;
-    top: 2rem;
-    right: 2rem;
+    top: 1rem;
+    right: 1.5rem;
     font-size:2rem;
     width: 3rem;
 }
 
-.audio:hover > .icon-volume-up::before{
+.audio:hover > .icon-volume-up::before{ 
     transition: font-size .3s;
     color: var(--cl-e);
     font-size: 2.3rem;

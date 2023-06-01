@@ -1,15 +1,19 @@
 // Alertas de orientacion para el juego
 function checkOrientation() {
-  const m = document.querySelector(".alert") 
-  if (window.innerWidth < window.innerHeight) {
-    m.classList.remove("hidden");
+  const modal = document.querySelector(".alert") 
+  const height = window.innerHeight + 200
+
+  if (window.innerWidth < height) {
+    modal.classList.remove("hidden");
     console.log("poraqui paso")
   }
   else {
-    m.classList.add("hidden");
+    modal.classList.add("hidden");
   }
 }
 function modal() {
+  checkOrientation();
+
   window.addEventListener("resize", () => {
       checkOrientation();
   });
