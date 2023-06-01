@@ -23,11 +23,19 @@
 		</footer>
 	</section>
 	<section class="scene intro hidden">
-		<!-- <div id="slideshow"> -->
-		<!--     <img src="imagen1.jpg" alt="slide 1"> -->
-		<!--     <img src="imagen2.jpg" alt="slide 2"> -->
-		<!--     <img src="imagen3.jpg" alt="slide 3"> -->
-		<!-- </div>	 -->
+		<div id="slideshow">
+			<p class="slideshow__item" > 
+				Soldado, estás a punto de embarcarte en una misión de vital importancia. Como aprendiz en las fuerzas especiales del regimiento de guerra informática Geobuk-Deung, te enfrentas a un desafío sin precedentes. Un examen crucial ha comenzado: la instalación del nuevo sistema operativo exclusivo de las fuerzas militares en nuestros ordenadores. Pero esto no es solo una tarea técnica, soldado. Es mucho más que eso.
+			</p>
+			<p class="slideshow__item" >
+				El líder absoluto de nuestra nación estará presente en este examen. Y tú, mi leal subalterno, serás la persona encargada de llevar a cabo el procedimiento públicamente. Es un honor y una responsabilidad inmensa. Cada movimiento, cada acción que realices será observada de cerca. No hay margen para errores. El éxito significa mantenernos a salvo, pero un solo fallo puede costarnos la vida.
+			</p>
+			<p class="slideshow__item" >
+				Nuestro país confía en nosotros para proteger sus secretos más valiosos y salvaguardar su seguridad. La precisión y la eficiencia son imprescindibles. Cada línea de código, cada configuración debe ser ejecutada sin titubeos. La seguridad de nuestra nación depende de ello. Y tu vida tambien.
+			</p>
+		</div>
+		<img class="intro__soldier" src="resources/assets/dibujo.svg " alt="">
+		<button class="slideshow__btn">Siguiente</button>
 	</section>
 	<section class="scene game hidden">
 		<div class="game__terminal">
@@ -51,20 +59,14 @@
 	<section class="scene credits hidden">
 		<p class="credicts__text">
 			El presente juego fue desarrollado por jorge Iván como proyecto final para la asignatura de introducción a la ingenieria y computacion. 
-			Todas las herramientas utilizadas para la realización de este juego son de libre uso. 
-			Las imagenes utilizadas son de creacion propia.
-			Los audios fueron utilizados de esta fuente
-			las fuentes tipograficas de esta fuente
 		</p>
 	</section>
 	<div class="alert hidden">
 		<p class="alert__text">La pantalla debe ir horizontal</p>
 	</div>
 	<section class="filter"></section>
-	<button class="audio"><i class="icon-volume-up"></i></button>
 
-
-<!-- <audio id="myAudio" src="ruta/al/archivo-de-audio.mp3" autoplay loop></audio> -->
-<!-- <button id="playButton">Reproducir</button> -->
+	<button class="audio audio_btn"><i class="audio_icon icon-volume-up"></i></button>
+	<audio id="audio" src="resources/audio/tense.mp3" autoplay loop></audio>
 </body>
 </html>

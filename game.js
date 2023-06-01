@@ -3,6 +3,8 @@ import modal from "./modules/alert.mjs";
 import nextScene from "./modules/next-scene.mjs"; 
 import terminal from "./modules/terminal/terminal.mjs";
 import timer from "./modules/timer.mjs";
+import controllAudio from "./modules/audio.mjs";
+
 
 
 // Alertas sobre la orientacion de la pantalla
@@ -18,4 +20,9 @@ terminal();
 window.onload = function () {
     timer(3);
 };
+
+// Control de audio
+controllAudio();
+
+//slides 
 

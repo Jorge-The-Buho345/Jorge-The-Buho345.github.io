@@ -2,10 +2,12 @@
 function processCommand(command) {
   if (command === "clear") {
     return "clear"
-  } else if (command === "fecha") {
+  } else if (command === "date") {
     return new Date().toLocaleDateString();
   } else if (command === "hello") {
     return "hola compas";
+  } else if (command === "help") {
+    return "Comandos disponibles: date, hello, clear";
   } else {
     return "Comando no reconocido";
   }

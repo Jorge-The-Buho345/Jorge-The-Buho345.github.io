@@ -1,13 +1,14 @@
 // Funciones para pasar de escena del juego
+import slide from "./slide.mjs"
 
-function sceneGame(btn) {
+function sceneIntro(btn) {
   btn.addEventListener("click", () => {
-    console.log(btn)
-    const game = document.querySelector(".game");
+    const intro = document.querySelector(".intro");
     const menu = document.querySelector(".menu");
-
+  
     menu.classList.add("hidden");
-    game.classList.remove("hidden");  
+    intro.classList.remove("hidden");  
+    slide() 
   })
 }
 
@@ -15,17 +16,19 @@ function sceneCredits(btn) {
   btn.addEventListener("click", () => {
     let credits = document.querySelector(".credits");
     let menu = document.querySelector(".menu");
-
+    
     menu.classList.add("hidden");
     credits.classList.remove("hidden");  
   })
 }
 
+
+
 function nextScene() {
   const btnGame = document.querySelector("#game");
   const btnCredits = document.querySelector("#credits");
 
-  sceneGame(btnGame);
+  sceneIntro(btnGame);
   sceneCredits(btnCredits);
 }
 
