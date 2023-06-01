@@ -26,7 +26,8 @@ function executeCommand() {
 
       const resultLine = document.createElement("p");
       resultLine.classList.add("game-tmn-otp__text");
-      resultLine.textContent = result;
+      resultLine.innerHTML = result;
+      resultLine.style.textAlign = 'justify';
       output.appendChild(resultLine);
 
     }
